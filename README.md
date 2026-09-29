@@ -1,61 +1,25 @@
-Telas do Sistema
-1. Tela de Login (TelaLogin.java)
-É a porta de entrada da aplicação.
+Sistema de Gestão e Login (LoginUsuarioARG)Este projeto é uma aplicação desktop desenvolvida em Java (Swing UI) no ambiente NetBeans IDE, integrada com banco de dados MySQL via XAMPP. O sistema oferece autenticação de acessos e gerenciamento completo de cadastros (CRUD) para utilizadores e clientes.   Estrutura das Telas do Sistema1. Tela de Login (TelaLogin.java)Ponto de entrada do sistema[cite: 10, 12].Funções principais:Autenticação de utilizadores com verificação de credenciais no banco de dados[cite: 10, 14].Indicador visual de Status da conexão MySQL via módulo Mod_conexao (ícone verde para conexão ativa, ícone vermelho para offline)[cite: 10, 12].2. Tela Principal (TelaPrincipal.java)Janela MDI principal que serve como painel central da aplicação[cite: 8, 12].Funções principais:Barra de navegação com menus de Cadastro, Opções e Ajuda[cite: 8].Atalhos diretos para abertura dos formulários internos de Cliente e Usuário[cite: 8].3. Tela de Cadastro de Usuários (telaUsuarios.java)Gerenciamento das contas de operadores com acesso ao sistema[cite: 7, 12].Campos do formulário: ID, Email, Nome e Senha[cite: 7].Operações disponíveis (CRUD):Adicionar: Cadastra novos utilizadores[cite: 7].Editar: Atualiza os dados de cadastros existentes[cite: 7].Visualizar: Realiza a consulta e carregamento dos registos[cite: 7].Apagar: Remove o utilizador selecionado[cite: 7].4. Tela de Cadastro de Clientes (TelaCliente.java)Formulário para controle e manutenção da base de clientes[cite: 9, 12].Campos do formulário: ID, Nome, Endereço, Cidade, UF, Tipo de Documento (CPF/CNPJ), Número do Documento, Telefone e Data de Nascimento[cite: 9].Operações disponíveis (CRUD):Adicionar: Regista um novo cliente no banco de dados[cite: 9].Editar: Altera informações cadastrais e de contato[cite: 9].Visualizar: Localiza e exibe os dados do cliente[cite: 9].Apagar: Exclui o registo do cliente[cite: 9].5. Tela Sobre (TelaSobre.java)Janela informativa referente aos créditos, versão e detalhes de desenvolvimento do projeto[cite: 12].LoginUsuarioARG/
+├── build.xml
+├── README.md
+└── src/
+    ├── dal/
+    │   └── Mod_conexao.java       # Módulo de conexão com banco MySQL
+    ├── icones/
+    │   ├── KnobCancel.png         # Ícone de status offline
+    │   └── KnobValidGreen.png     # Ícone de status online
+    └── telas/
+        ├── TelaCliente.java       # Form de cadastro de clientes
+        ├── TelaLogin.java         # Form de autenticação de acesso
+        ├── TelaPrincipal.java     # Janela MDI principal
+        ├── TelaSobre.java         # Informações do sistema
+        └── telaUsuarios.java      # Form de cadastro de utilizadores
+```[cite: 11, 12, 14]
 
-Funções principais:
+---
 
-Permite a autenticação do utilizador mediante a introdução do e-mail/nome de utilizador e palavra-passe[cite: 10].
+## Tecnologias Utilizadas
 
-Valida as credenciais na tabela de utilizadores e redireciona para a Tela Principal em caso de sucesso[cite: 10].
-
-Apresenta o indicador Status no canto inferior, exibindo se a ligação ao banco de dados MySQL está ativa ou off-line[cite: 10].
-
-2. Tela Principal (TelaPrincipal.java)
-Atua como o painel central de navegação (MDI Principal) do sistema.
-
-Funções principais:
-
-Contém a barra de menu superior (Cadastro, Opções, Ajuda)[cite: 8].
-
-Disponibiliza os atalhos para abrir as janelas internas do sistema:
-
-Cliente: Abre o formulário de cadastro de clientes[cite: 8].
-
-Usuário: Abre o formulário de cadastro de operadores/utilizadores[cite: 8].
-
-3. Tela de Cadastro de Usuários (telaUsuarios.java)
-Janela dedicada ao gerenciamento dos utilizadores com permissão de acesso ao sistema.
-
-Campos contidos: ID, Email, Nome e Senha[cite: 7].
-
-Operações disponíveis (CRUD):
-
-Adicionar: Regista um novo utilizador no banco de dados[cite: 7].
-
-Editar: Atualiza os dados de um utilizador existente[cite: 7].
-
-Visualizar: Consulta e carrega os dados armazenados[cite: 7].
-
-Apagar: Remove o registo do utilizador selecionado[cite: 7].
-
-4. Tela de Cadastro de Clientes (TelaCliente.java)
-Formulário completo para a gestão da base de clientes.
-
-Campos contidos: ID, Nome, Endereço, Cidade (menu suspenso), UF, Seleção de documento (CPF ou CNPJ), CPF/CNPJ, Telefone e Data de Nascimento[cite: 9].
-
-Operações disponíveis (CRUD):
-
-Adicionar: Regista um cliente completo na base de dados[cite: 9].
-
-Editar: Modifica as informações de contacto ou endereço do cliente[cite: 9].
-
-Visualizar: Pesquisa e exibe os detalhes do cliente selecionado[cite: 9].
-
-Apagar: Remove o registo do cliente da base[cite: 9].
-
-Tecnologias Utilizadas
-Linguagem: Java (Swing UI)
-
-IDE: NetBeans
-
-Banco de Dados: MySQL (phpMyAdmin)
+* **Linguagem:** Java (Swing UI)[cite: 14]
+* **IDE:** NetBeans IDE[cite: 11, 14]
+* **Automação de Build:** Apache Ant (`build.xml`)[cite: 11]
+* **Banco de Dados:** MySQL (XAMPP / phpMyAdmin)[cite: 14]
